@@ -8,6 +8,7 @@ to potentially work as an option for caching.
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
+- [API Documentation](#api-documentation)
 
 ## Installation
 
@@ -31,3 +32,33 @@ Multiple Value Key Pairs {'ID': filename: 'ID', filepath: './path/to/file'}
    cacheIdMultipleValue('./path/to/file.json');
    console.log(getCacheMultipleValue());
    ```
+
+## Api Documentation
+
+cacheId(filePathOfJson)
+
+    Parameters: filePathOfJson (String) — Path to the .json file.
+    Returns: String — The cached filename if already cached, or the newly cached filename.
+    Description: Caches the file name if it hasn't been cached yet and returns the cached value when called again.
+
+getCache()
+
+    Returns: Object — The current cache object, containing all cached filenames.
+    Description: Returns the current state of the cache.
+
+cacheIdMultipleValue(filePathOfJson)
+
+    Parameters: filePathOfJson (String) — Path to the .json file.
+    Returns: String — The cached filename if already cached, or the newly cached filename.
+    Description: Caches the file name if it hasn't been cached yet and returns the cached value when called again.
+
+getCacheMultipleValue()
+
+    Returns: Object — The current cache object, containing all cached filenames and filepaths.
+    Description: Returns the current state of the cache.
+
+getFileName(filePathOfJson)
+
+    Parameters: filePathOfJson (String) — Path to the .json file.
+    Returns: String — The filename of the json
+    Description: Trims the file path of the json to get the filename then returns filename
